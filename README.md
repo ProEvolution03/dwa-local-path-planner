@@ -51,6 +51,7 @@ source install/setup.bash
 ### 4. Launch the Simulation
 **Gazebo Simulation**: In the 1st Terminal, start the Gazebo environment with TurtleBot3:
 ```sh
+export TURTLEBOT3_MODEL=burger
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
