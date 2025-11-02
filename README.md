@@ -46,6 +46,7 @@ Open a new terminal and run the following:
 cd ~/ros2_ws/src
 colcon build --packages-select dwa_nav_pkg
 source install/setup.bash
+source /opt/ros/humble/setup.bash
 ```
 
 ### 4. Launch the Simulation
