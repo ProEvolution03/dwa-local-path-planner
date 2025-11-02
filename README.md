@@ -1,4 +1,4 @@
-# Custom DWA Local Planner for ROS2
+# Custom Dynamic Window Approach (DWA) local planner
 
 ## Overview
 This github repo focuses on implementing a **DYNAMIC WINDOW APPROACH (DWA) local planner** in ROS2 Humble that utilises the Turtlebot3 and Gazebo packages and without the usage of **nav2_dwb_controller**. 
