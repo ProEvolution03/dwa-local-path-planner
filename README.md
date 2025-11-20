@@ -15,23 +15,20 @@ The goal for this algorithm is to navigate the turtlebot to a goal, while avoidi
 - Works in **Gazebo** with obstacles for real-world testing.
 
 ## Installation & Setup
-### 1. Install ROS2 Humble and TurtleBot3 Simulation
+### 1. Install ROS2 Humble and the TurtleBot3 packages
 Ensure you have **ROS2 Humble** installed:
 ```sh
 sudo apt update
 sudo apt install ros-humble-desktop
+sudo apt install ros-humble-turtlebot3* ros-humble-gazebo*
 ```
 
 ### 2. Creating your workspace
-A.) Create your ROS2 workspace and clone the Turtlebot3 packages. 
+A.) Create your ROS2 workspace 
 
 ```sh
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws
-
-git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git -b humble
-git clone https://github.com/ROBOTIS-GIT/turtlebot3.git -b humble
-git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git -b humble
 ```
 
 B.) Navigate to your ROS2 'src' workspace and clone the custom DWA repository:
@@ -46,7 +43,6 @@ Open a new terminal and run the following:
 cd ~/ros2_ws/src
 colcon build --packages-select dwa_nav_pkg
 source install/setup.bash
-source /opt/ros/humble/setup.bash
 ```
 
 ### 4. Launch the Simulation
@@ -58,6 +54,8 @@ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 
 In the 2nd Terminal, run the custom DWA local planner for goal selection:
 ```sh
+cd ~/ros2_ws/src
+colcon build
 ros2 run dwa_nav_pkg run_dwa
 ```
 
