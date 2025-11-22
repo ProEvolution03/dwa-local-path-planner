@@ -27,20 +27,19 @@ sudo apt install ros-humble-turtlebot3* ros-humble-gazebo*
 A.) Create your ROS2 workspace 
 
 ```sh
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws
+mkdir -p ~/samp_ws/src
 ```
 
 B.) Navigate to your ROS2 'src' workspace and clone the custom DWA repository:
 ```sh
-cd ~/src
+cd ~/samp_ws/src
 git clone https://github.com/ProEvolution03/dwa-local-path-planner.git
 ```
 
 ### 3. Build the Package
 Open a new terminal and run the following:
 ```sh
-cd ~/ros2_ws/src
+cd ~/samp_ws/src
 colcon build --packages-select dwa_nav_pkg
 source install/setup.bash
 ```
@@ -54,7 +53,7 @@ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 
 In the 2nd Terminal, run the custom DWA local planner for goal selection:
 ```sh
-cd ~/ros2_ws/src
+cd ~/samp_ws/src
 colcon build
 ros2 run dwa_nav_pkg run_dwa
 ```
